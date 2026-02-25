@@ -4,6 +4,13 @@
 
 ---
 
+## 📦 Included Scripts
+
+- TurnBasedBattleManager.cs
+- RPGCharacter.cs
+
+---
+
 ## ✨ Features
 
 - 1v1 turn-based combat
