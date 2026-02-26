@@ -78,3 +78,9 @@ This allows full customization without modifying the base system.
 ## 🛠 Unity Version
 
 Tested in Unity6+ (should also work without problems in the newer versions)
+
+---
+
+## 📜 License
+
+MIT
