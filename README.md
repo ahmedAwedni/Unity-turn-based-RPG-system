@@ -67,6 +67,71 @@ This allows full customization without modifying the base system.
 
 ---
 
+## 🧩 How To Use
+
+### 1️⃣ Create Characters
+
+1. Create two empty GameObjects in your scene:
+   - Player1
+   - Player2
+
+2. Attach the RPGCharacter.cs script to both objects.
+
+3. In the Inspector, configure:
+   - Max Health
+   - Attack Power
+   - Defense Power
+   - Max Energy (default: 100)
+   - Energy Gained Per Turn (default: 20)
+   - Action Costs (Normal, Defend, Unique Skill)
+
+Each character can have different stats and different action costs.
+
+
+### 2️⃣ Create the Battle Manager
+
+1. Create an empty GameObject named:
+   - BattleManager
+
+2. Attach the TurnBasedBattleManager.cs script.
+
+3. In the Inspector:
+   - Assign Player1 to the Player One field
+   - Assign Player2 to the Player Two field
+   - Set Turn Duration (default: 30 seconds)
+
+
+### 3️⃣ Triggering Actions (UI or Input)
+
+This system is intentionally UI-independent.
+
+To trigger actions (for example from UI buttons), call:
+
+battleManager.TryNormalAttack();
+battleManager.TryDefend();
+battleManager.TryUniqueSkill();
+
+### 4️⃣ Implementing a Unique Skill
+
+The unique skill is intentionally left empty to allow full customization.
+
+In RPGCharacter.cs, complete:
+public override bool UseUniqueSkill(RPGCharacter target)
+{
+    // Your custom ability logic here
+    return true;
+}
+
+Inside this method you can implement:
+
+Damage abilities
+Healing skills
+Buffs / Debuffs
+Status effects
+Any special mechanics
+
+---
+
 ## 🚀 Possible Extensions
 
 - AI-controlled opponents
