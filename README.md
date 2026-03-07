@@ -124,8 +124,7 @@ public override bool UseUniqueSkill(RPGCharacter target)
 
 Inside this method you can implement:
 
-Damage abilities
-Healing skills
+Damage and Healing abilities
 Buffs / Debuffs
 Status effects
 Any special mechanics
